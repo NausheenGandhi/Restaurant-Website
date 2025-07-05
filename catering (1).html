@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catering Services - MN Restaurant</title>
+  <link rel="stylesheet" href="project.css">
+  <script src="nav_bar.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1, h2, h3, h4, p {
+      text-align: center;
+    }
+
+    .carousel {
+      width: 100%;
+      overflow: hidden;
+      margin: 40px auto;
+      position: relative;
+      max-width: 1000px;
+      border-radius: 15px;
+    }
+
+    .carousel img {
+      width: 100%;
+      display: block;
+      height: 500px;
+      object-fit: cover;
+    }
+
+    
+
+    .package-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin: 40px 0;
+    }
+
+    .package-card {
+      background-color: #fff3f0;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 300px;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .package-card:hover {
+      transform: scale(1.05);
+    }
+
+    .package-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .package-card h3 {
+      margin-top: 15px;
+      color: #c0392b;
+    }
+
+    .package-card p {
+      color: #444;
+      font-size: 14px;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    ul {
+      padding-left: 40px;
+    }
+
+    form {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: rgba(119, 94, 94, 0.742);
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(202, 58, 58, 0.514);
+  color: white;
+  border: #beb9b9;
+}
+
+form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #ffd28c;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="time"],
+form input[type="number"],
+form textarea {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #444;
+  border-radius: 8px;
+  background-color: #e6dbdb;
+  color: rgb(22, 17, 17);
+  font-size: 15px;
+  transition: border 0.3s;
+  
+}
+
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: #ffa35d;
+}
+
+form button[type="submit"] {
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button[type="submit"]:hover {
+  background-color: #e5533d;
+}
+
+#responseMessage {
+  margin-top: 15px;
+  text-align: center;
+  color: #90ee90;
+  font-weight: bold;
+}
+
+
+
+
+    .side-img {
+      float: right;
+      margin: 20px;
+      border-radius: 10px;
+      width: 350px;
+      height: auto;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    hr {
+      border-color: #aaa;
+      margin: 30px auto;
+      width: 80%;
+    }
+
+    @media screen and (max-width: 768px) {
+      .side-img {
+        float: none;
+        display: block;
+        margin: 20px auto;
+        width: 90%;
+      }
+
+      form {
+        margin: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+  <button class="closebtn" onclick="closeNav()">×</button>
+  <a href="homepage.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="catering (1).html">Catering</a>
+  <a href="about us (1).html">About Us</a>
+  <a href="contactus (1).html">Contact Us</a>
+  <a href="faqs (1).html">FAQ's</a>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="logo-area">
+    <img src="https://img.freepik.com/premium-vector/initial-monogram-letter-n-m-logo-design-vector-template-nm-letter-logo-design_565585-1122.jpg" alt="MN Logo" />
+    <div class="tagline">
+      <h1>MN Restaurant</h1>
+      <p>Korma Karma – What Goes Around Comes With Rice! 🍛</p>
+    </div>
+  </div>
+  <button class="hamburger" onclick="openNav()">☰</button>
+  <div class="announcement-bar">
+    <p>🔥 35% off on Chef’s Special | 🎉 New Korean BBQ Menu Live | 🍜 Happy Hours: 4 PM - 7 PM!</p>
+  </div>
+</header>
+<br><br>
+<header style="text-align: center; color:rgb(222, 183, 99);height: 20px">
+  <h1>CATERING</h1>
+  <h2>Experience the Rich Flavors of Asian & Middle Eastern Cuisine</h2>
+</header>
+
+<!-- Image Carousel -->
+<div class="carousel">
+ <img src="https://media.istockphoto.com/id/545286388/photo/chinese-food-blank-background.jpg?s=612x612&w=0&k=20&c=pqOIy07YKO5PlU5VxjscwTGRrrZ8PluKMUjSOz-II60=" 
+ height=500 width=1500 alt="Assorted Chinese food on a blank background">
+</div>
+
+
+
+<div class="section">
+  <h4>----Make Your Next Event Memorable</h4>
+  <h2>With Our Specialized Catering Services</h2>
+
+  <p>Make your celebration unforgettable with MN Restaurant's catering. Our expert chefs craft authentic Asian and Middle Eastern dishes perfect for weddings, Eid, birthdays, and special events.</p>
+
+  <p>From traditional biryani and sweet dumplings to flavorful kebabs and fatteh hummus, our menu brings richness to any occasion. Customize your menu, choose buffet or plated service, and let us handle the cutlery and setup!</p>
+
+  <p>Whether pickup or delivery, enjoy our chef-curated meals made from the freshest ingredients. Let MN Restaurant turn your event into a culinary experience your guests will remember.</p>
+
+ 
+</div>
+
+
+<!-- Package Cards -->
+<div class="package-section">
+  <div class="package-card">
+    <img src="https://img.freepik.com/premium-photo/cartoon-eid-alfitr-feast_902820-2101.jpg" alt="Eid Special">
+    <h3>Eid Special</h3>
+    <p>Includes Biryani, Kebabs, Sweets and Special Drinks. Serves 20+ Guests.</p>
+    <p><strong>Price: ₹5999</strong></p>
+  </div>
+  <div class="package-card">
+    <img src="https://img.freepik.com/premium-vector/family-celebrating-birthday-with-cake-presents_150234-125008.jpg" alt="Birthday Party Combo">
+    <h3>Birthday Party Combo</h3>
+    <p>Pizza, Pasta, Fried Snacks, and Cold Beverages. Serves 15 Guests.</p>
+    <p><strong>Price: ₹3999</strong></p>
+  </div>
+  <div class="package-card">
+    <img src="https://whattogetmy.com/wp-content/uploads/2022/02/7.-Beverage-table-610x482.jpg" alt="Wedding Feast">
+    <h3>Wedding Feast</h3>
+    <p>Lavish Spread of Appetizers, Main Course & Desserts. Serves 50+ Guests.</p>
+    <p><strong>Price: ₹14999</strong></p>
+  </div>
+</div>
+
+<hr>
+<div class="section">
+  <h4>------Tell Us More About Your</h4>
+  <h2>Catering Requirements</h2>
+
+  <ul>
+    <li>Date and Time of the Event</li>
+    <li>Type of Event: Wedding, Corporate, Birthday, etc.</li>
+    <li>Expected Number of Guests</li>
+    <li>Dietary Preferences: Vegetarian, Vegan, Gluten-Free, etc.</li>
+    <li>Catering Style: Buffet or Plated Service</li>
+    <li>Menu Preferences or Special Requests</li>
+    <li>Equipment Needed: Cutlery, Plates, etc.</li>
+  </ul>
+
+   
+    <form id="cateringForm">
+    <label for="t1">Your Name:</label>
+      <input type="text" id="t1" name="name" placeholder="Your Name" required>
+
+    <label for="e1">Your Email:</label>
+      <input type="email" id="e1" name="email" placeholder="Your Email" required>
+
+    <label for="n1">Your Phone:</label>
+    <input type="text" id="n1" name="phone" placeholder="Phone Number" required>
+
+    <label for="event-date">Event Date</label>
+    <input type="date" id="event-date" name="date" required placeholder="Select event date" title="Select the date of your event">
+
+      <label for="event-time">Event Time</label>
+      <input type="time" id="event-time" name="time" required placeholder="Select event time" title="Select the time of your event">
+    <label for="guests">Number of Guests</label>
+      <input type="number" id="guests" name="guests" placeholder="Number of Guests" required>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="responseMessage"></p>
+  </div>
+
+  <script>
+    document.getElementById('cateringForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const formData = {
+    name: document.getElementById('t1').value,
+    email: document.getElementById('e1').value,
+    phone: document.getElementById('n1').value,
+    date: document.getElementById('event-date').value,
+    time: document.getElementById('event-time').value,
+    guests: parseInt(document.getElementById('guests').value),
+  };
+
+  try {
+   const response = await fetch('http://127.0.0.1:5000/catering', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(formData)
+});
+
+
+    const result = await response.json();
+    if (result.success) {
+      document.getElementById('responseMessage').textContent = 'Your response has been recorded!';
+      this.reset();
+    } else {
+      document.getElementById('responseMessage').textContent = 'Something went wrong. Please try again.';
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    document.getElementById('responseMessage').textContent = 'Server error. Please try later.';
+  }
+});
+
+    
+  </script>
+</div>
+
+</body>
+</html>

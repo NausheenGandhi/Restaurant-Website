@@ -1,0 +1,167 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MENU</title>
+  <link rel="stylesheet" href="project.css">
+  <script src="nav_bar.js"></script>
+</head>
+<body>
+  
+<!-- Sidebar -->
+<div id="mySidebar" class="sidebar">
+  <button class="closebtn" onclick="closeNav()">×</button>
+  <a href="homepage.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="catering (1).html">Catering</a>
+  <a href="about us (1).html">About Us</a>
+  <a href="contactus (1).html">Contact Us</a>
+  <a href="faqs (1).html">FAQ's</a>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="logo-area">
+    <img src="https://img.freepik.com/premium-vector/initial-monogram-letter-n-m-logo-design-vector-template-nm-letter-logo-design_565585-1122.jpg" alt="MN Logo" />
+    <div class="tagline">
+      <h1>MN Restaurant</h1>
+      <p>Korma Karma – What Goes Around Comes With Rice! 🍛</p>
+    </div>
+  </div>
+  <button class="hamburger" onclick="openNav()">☰</button>
+  <div class="announcement-bar">
+    <p>🔥 35% off on Chef’s Special | 🎉 New Korean BBQ Menu Live | 🍜 Happy Hours: 4 PM - 7 PM!</p>
+  </div>
+</header>
+
+<center>
+  <div class="menu-section">
+     <div class="cart-icon" title="View Cart" onclick="toggleCart()">🛒</div>
+
+  <div id="cart-items">
+    <h4>Cart</h4>
+    <ul id="cart-list"></ul>
+  </div>
+    
+    <h1>MENU</h1>
+    <h4>Indulge in the exquisite and diverse tastes of Asian cuisine with our menu.</h4>
+
+    <h2>Main Course</h2><hr>
+    <div class="menu-grid">
+      <div class="menu-item" onclick="addToCart('Biryani - ₹280')">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfgZFGrnQZMaBUfOSWVR-zf61BdNupuD_Bew&usqp=CAU" alt="Biryani">
+        <div class="price">Biryani - ₹280</div>
+      </div>
+      <div class="menu-item" onclick="addToCart('Chicken Tikka Masala - ₹265')">
+        <img src="https://www.eatthis.com/wp-content/uploads/sites/4/2020/01/chicken-tikka-masala.jpg?quality=82&strip=1" alt="Chicken Tikka Masala">
+        <div class="price">Chicken Tikka Masala - ₹265</div>
+      </div>
+      <div class="menu-item" onclick="addToCart('Chole Bhature - ₹270')">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/015/933/115/small/chole-bhature-is-a-north-indian-food-dish-a-combination-of-chana-masala-and-bhatura-or-puri-free-photo.jpg" alt="Chole Bhature">
+        <div class="price">Chole Bhature - ₹270</div>
+      </div>
+      <div class="menu-item" onclick="addToCart('Palak Paneer - ₹280')">
+        <img src="https://www.indianveggiedelight.com/wp-content/uploads/2017/10/palak-paneer-recipe-featured.jpg" alt="Palak Paneer">
+        <div class="price">Palak Paneer - ₹280</div>
+      </div>
+      <div class="menu-item" onclick="addToCart('Korean Tteokbokki - ₹300')">
+        <img src="https://chefatulya.com/wp-content/uploads/2021/07/tteokbokki_1-copy.jpg" alt="Korean Tteokbokki">
+        <div class="price">Korean Tteokbokki - ₹300</div>
+      </div>
+      <div class="menu-item" onclick="addToCart('Gimbap - ₹270')">
+        <img src="https://media.cnn.com/api/v1/images/stellar/prod/181115105819-korean-food149201306006k-gimbap.jpg?q=w_1600,h_900,x_0,y_0,c_fill/h_618" alt="Gimbap">
+        <div class="price">Gimbap - ₹270</div>
+      </div>
+      <div class="menu-item" onclick="addToCart('Noodles - ₹250')">
+        <img src="https://content.jdmagicbox.com/comp/delhi/r2/011pxx11.xx11.171127123811.v6r2/catalogue/raj-chinese-food-rohini-sector-10-delhi-take-away-joints-1fzcrn4vh9.jpg" alt="Noodles">
+        <div class="price">Noodles - ₹250</div>
+      </div>
+      <div class="menu-item" onclick="addToCart('Sushi - ₹280')">
+        <img src="https://fusedbyfionauyema.com/wp-content/uploads/2021/02/Fused-by-Fiona-Uyema-Sushi-Q-A-how-to-make-sushi-at-home.jpg" alt="Sushi">
+        <div class="price">Sushi - ₹280</div>
+      </div>
+    </div>
+
+
+
+
+
+     <h2>Starters / Sides</h2><hr>
+    <div class="menu-grid">
+      <div class="menu-item" onclick="addToCart('Chicken Kebabs - ₹385')">
+        <img src="https://res.cloudinary.com/gagan/image/upload/v1618314284/oqkiqicouuvwrlzebg3j.jpg" alt="Chicken Kebabs">
+        <div class="price">Chicken Kebabs - ₹385</div>
+      </div>
+      <div class="menu-item" onclick="addToCart('Samosa - ₹200')">
+        <img src="https://vegecravings.com/wp-content/uploads/2017/03/samosa-recipe-step-by-step-instructions.jpg" alt="Samosa">
+        <div class="price">Samosa - ₹200</div>
+      </div>
+      <div class="menu-item" onclick="addToCart('Chicken Lollipop - ₹270')">
+        <img src="https://www.cookwithkushi.com/wp-content/uploads/2022/01/best_chicken_lollipop_drums_of_chicken.jpg" alt="Chicken Lollipop">
+        <div class="price">Chicken Lollipop - ₹270</div>
+      </div>
+      <div class="menu-item" onclick="addToCart('Spring Rolls - ₹230')">
+        <img src="https://insanelygoodrecipes.com/wp-content/uploads/2021/01/Homemade_Egg_Rolls-800x530.png" alt="Spring Rolls">
+        <div class="price">Spring Rolls - ₹230</div>
+      </div>
+    </div>
+
+    <h2>Desserts</h2><hr>
+    <div class="menu-grid">
+      <div class="menu-item" onclick="addToCart('Dryfruit Mango Halwa - ₹245')">
+        <img src="https://nomadparadise.com/wp-content/uploads/2022/01/indian-desserts-14-1024x683.jpg.webp" alt="Indian Desserts">
+        <div class="price">Dryfruit Mango Halwa - ₹245</div>
+      </div>
+      <div class="menu-item" onclick="addToCart('Caramel Custard - ₹245')">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.sh3sXZUKmkVGt4vSz_h_YwHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Caramel Custard">
+        <div class="price">Caramel Custard - ₹245</div>
+      </div>
+      <div class="menu-item" onclick="addToCart('Sweet Dumplings - ₹270')">
+        <img src="https://img.ehowcdn.com/375/media-storage/contentlab-data/11/8/b6623de2401b4d069d789b6c3cb24771.jpg" alt="Sweet Dumplings">
+        <div class="price">Sweet Dumplings - ₹270</div>
+      </div>
+      <div class="menu-item" onclick="addToCart('Special Rasmalai - ₹250')">
+        <img src="https://hamariweb.com/recipes/images/recipeimages/10075.jpg" alt="Rasmalai">
+        <div class="price">Special Rasmalai - ₹250</div>
+      </div>
+    </div>
+  </div>
+  <h2>Drinks & Beverages</h2><hr>
+    <div class="menu-grid">
+      <div class="menu-item" onclick="addToCart('Mocktails (7 flavours) - ₹280')">
+        <img src="https://www.spoton.com/blog/content/images/2023/08/Mocktail--zero-proof-cocktails--and-different-non-alcoholic-drinks.jpeg" alt="Mocktails">
+        <div class="price">Mocktails (7 flavours) - ₹280</div>
+      </div>
+      <div class="menu-item" onclick="addToCart('Milkshake - ₹275')">
+        <img src="https://www.biggerbolderbaking.com/wp-content/uploads/2015/05/BBB71-Homemade-Ice-Cream-Milkshakes-Thumbnail-v.1.jpg" alt="Milkshake">
+        <div class="price">Milkshake - ₹275</div>
+      </div>
+      <div class="menu-item" onclick="addToCart('Korean Special Tea - ₹270')">
+        <img src="https://www.90daykorean.com/wp-content/uploads/2016/09/omija-tea.webp" alt="Korean Tea">
+        <div class="price">Korean Special Tea - ₹270</div>
+      </div>
+      <div class="menu-item" onclick="addToCart('Rasgulla Falooda - ₹300')">
+        <img src="https://www.cookwithkushi.com/wp-content/uploads/2022/10/rasgulla_falooda_00.jpg" alt="Rasgulla Falooda">
+        <div class="price">Rasgulla Falooda - ₹300</div>
+      </div>
+    </div>
+  </div>
+</center>
+
+  <script>
+    const cartList = document.getElementById('cart-list');
+    const cartItemsBox = document.getElementById('cart-items');
+
+    function addToCart(item) {
+      const li = document.createElement('li');
+      li.textContent = item;
+      cartList.appendChild(li);
+      cartItemsBox.style.display = 'block';
+    }
+
+    function toggleCart() {
+      cartItemsBox.style.display = cartItemsBox.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>

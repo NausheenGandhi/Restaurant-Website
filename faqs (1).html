@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs - MN Restaurant</title>
+  <link rel="stylesheet" href="project.css">
+  <script src="nav_bar.js"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: white;
+      margin: 0;
+      padding: 0 20px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #ffa35d;
+    }
+
+    img {
+      float: right;
+      margin-left: 30px;
+      border-radius: 10px;
+      max-width: 40%;
+      height: auto;
+    }
+
+    .faq-container {
+      max-width: 900px;
+      margin: 40px auto;
+    }
+
+    .faq {
+      background-color: #111;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid #333;
+    }
+
+    .faq-question {
+      padding: 15px 20px;
+      cursor: pointer;
+      background-color: #222;
+      font-weight: bold;
+      font-size: 18px;
+      border-bottom: 1px solid #444;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 15px 20px;
+      background-color: #1a1a1a;
+      line-height: 1.6;
+    }
+
+    .faq.active .faq-answer {
+      display: block;
+    }
+
+    @media screen and (max-width: 768px) {
+      img {
+        float: none;
+        display: block;
+        margin: 0 auto 20px;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+  <button class="closebtn" onclick="closeNav()">×</button>
+  <a href="homepage.html">Home</a>
+  <a href="menu.html">Menu</a>
+  <a href="catering (1).html">Catering</a>
+  <a href="about us (1).html">About Us</a>
+  <a href="#">Contact Us</a>
+  <a href="faqs (1).html">FAQ's</a>
+</div>
+
+<!-- Header -->
+<header>
+  <div class="logo-area">
+    <img src="https://img.freepik.com/premium-vector/initial-monogram-letter-n-m-logo-design-vector-template-nm-letter-logo-design_565585-1122.jpg" alt="MN Logo" />
+    <div class="tagline">
+      <h1>MN Restaurant</h1>
+      <p>Korma Karma - What Goes Around Comes With Rice! 🍛</p>
+    </div>
+  </div>
+  <button class="hamburger" onclick="openNav()">☰</button>
+  <div class="announcement-bar">
+    <p>🔥 35% off on Chef's Special | 🎉 New Korean BBQ Menu Live | 🍜 Happy Hours: 4 PM - 7 PM!</p>
+  </div>
+</header>
+
+  <h1>---------FAQ's</h1>
+  <h2>Questions? We have answers!</h2>
+
+  <img src="https://ottawakabab.com/wp-content/uploads/2023/03/Ottawa-Kabab_Hero_adobe_express-scaled.jpeg" alt="Kabab Dish">
+
+  <div class="faq-container">
+
+    <h4 style="text-align: center;">Check out our frequently asked questions below.<br>
+    Have a question that's not answered here? Don't hesitate to reach out to us - we're always happy to help.</h4>
+    <br>
+
+    <div class="faq">
+      <div class="faq-question">🍽️ What types of cuisine does Ottawa Kabab serve?</div>
+      <div class="faq-answer">
+        Ottawa Kabab serves Asian cuisine, especially Indian dishes. Our menu includes both meat and vegetarian options: appetizers, dips, salads, entrees, and desserts.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">📦 Does Ottawa Kabab offer takeout and delivery?</div>
+      <div class="faq-answer">
+        Yes! We offer takeout and delivery. Call us for pickup orders, or use UberEats and SkipTheDishes for home delivery.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">🥗 Are there vegetarian options available?</div>
+      <div class="faq-answer">
+        Absolutely. Try our hummus, baba ganoush, muhammara, or vegetarian platter with falafel, grape leaves, and tabbouleh.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">🎉 Do you offer catering services?</div>
+      <div class="faq-answer">
+        Yes! We cater for weddings, corporate events, and private parties. Vegetarian and meat options available. Customizable menus too.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">🌟 What are your most popular dishes?</div>
+      <div class="faq-answer">
+        Our bestsellers include fatteh hummus with almonds & pomegranate, grilled meat/chicken cubes, smoky baba ganoush, and mutabal.
+      </div>
+    </div>
+
+    <div class="faq">
+      <div class="faq-question">🕐 What are your hours of operation?</div>
+      <div class="faq-answer">
+        We are open daily from 11 AM to 9 PM (except Thursdays). During Ramadan: 12 PM to 10 PM.
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Toggle accordion FAQ items
+    const faqs = document.querySelectorAll('.faq');
+
+    faqs.forEach(faq => {
+      faq.querySelector('.faq-question').addEventListener('click', () => {
+        faq.classList.toggle('active');
+      });
+    });
+  </script>
+
+</body>
+</html>

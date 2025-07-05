@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Table</title>
+  <style>
+    header{
+  background-image:url('https://static2.bigstockphoto.com/7/9/2/large1500/297327124.jpg');
+  background-size:cover;
+  height:200px;
+  }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: black;
+    }
+    .booking-form {
+      display: inline-block;
+      text-align: left; 
+      max-width: 400px;
+    }
+    .booking-form input,
+    .booking-form select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+    .booking-form button {
+      padding: 8px 16px;
+      background-color: #848080;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    #responseMessage {
+      margin-top: 10px;
+      font-weight: bold;
+      color: green;
+    }
+    h2{
+        color: red;
+    }
+  </style>
+</head>
+<body>
+    <header></header>
+    <div style="text-align: center;">
+    <img src="https://img.freepik.com/premium-vector/initial-monogram-letter-n-m-logo-design-vector-template-nm-letter-logo-design_565585-1122.jpg" width=150 height=100 alt="NM Letter Logo">
+    </div>
+
+<div style="text-align: center;">
+  <h2>Book a Table</h2>
+  <div class="booking-form">
+    <form id="bookingForm">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Phone Number" required>
+      <label for="dateInput">Date</label>
+      <input type="date" id="dateInput" name="date" required placeholder="Select date" title="Select the date for your reservation">
+      <label for="timeInput">Time</label>
+      <input type="time" id="timeInput" name="time" required placeholder="Select time" title="Select the time for your reservation">
+      <label for="guestsSelect">Number of Guests</label>
+      <select id="guestsSelect" name="guests" required>
+        <option value="">Number of Guests</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+      <button type="submit">Book Table</button>
+    </form>
+    <p id="responseMessage"></p>
+  </div>
+</div>
+
+  <script>
+    document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const formData = {
+        name: this.name.value,
+        email: this.email.value,
+        phone: this.phone.value,
+        date: this.date.value,
+        time: this.time.value,
+        guests: parseInt(this.guests.value)
+      };
+
+      try {
+        const response = await fetch('http://localhost:5000/book-table', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData)
+        });
+
+        const result = await response.json();
+        if (result.success) {
+          document.getElementById('responseMessage').textContent = 'Your table has been booked!';
+          this.reset();
+        } else {
+          document.getElementById('responseMessage').textContent = 'Something went wrong. Please try again.';
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        document.getElementById('responseMessage').textContent = 'Server error. Please try later.';
+      }
+    });
+  </script>
+
+</body>
+</html>
